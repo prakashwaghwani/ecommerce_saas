@@ -15,6 +15,9 @@ end
 gem 'bootstrap-sass'
 #add bootstrap
 
+gem 'font-awesome-sass', '~> 4.5.0'
+#adding font
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

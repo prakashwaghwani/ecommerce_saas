@@ -9,7 +9,7 @@ gem 'sqlite3',  group: [:development, :test]
 #use stripe for handling payments
 gem 'stripe'
 
-#use figaro for hiding special files
+#use figaro for hiding secret keys
 gem 'figaro'
 
 # use postgresql as the database for production

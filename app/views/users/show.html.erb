@@ -1,0 +1,9 @@
+Full Name: <%= @user.profile.first_name%> <%= @user.profile.last_name%><br>
+Title: <%= @user.profile.job_title%><br>
+<% if current_user.plan_id == '2'%>
+  Email: <%= @user.profile.contact_email%><br>
+  Phone Number: <%= @user.profile.phone_number%>
+<% end %>
+Bio: <%= @user.profile.description%><br>
+
+<%= link_to "Back", root_url%>

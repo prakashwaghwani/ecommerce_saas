@@ -12,6 +12,7 @@ gem 'stripe'
 #use figaro for hiding secret keys
 gem 'figaro'
 
+gem 'pry'
 # use postgresql as the database for production
 group :production do
   gem 'pg'

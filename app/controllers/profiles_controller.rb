@@ -1,4 +1,7 @@
 class ProfilesController < ApplicationController
+  before_action :authenticate_user!
+  before_action :only_current_user
+
   def new
     @user = user_params
     @profile = Profile.new
@@ -17,12 +20,21 @@ class ProfilesController < ApplicationController
 
   def edit
     @user = user_params
-    @profile = profile_id
+    @profile = @user.profile
 
   end
 
   def update
+    @user = user_params
+    @profile = @user.profile
+    if @profile.update_attributes(profile_params)
+      flash[:success] = "Profile updated!"
+      redirect_to user_path(@user.id)
+    else
+      render action: :edit
+    end
   end
+
 
   def show
   end
@@ -36,9 +48,11 @@ class ProfilesController < ApplicationController
     @user = User.find(params[:user_id])
   end
 
-  def profile_id
-    Profile.find(params[:user_id])
+  def only_current_user
+    @user = User.find(params[:user_id])
+    redirect_to root_url unless @user == current_user
   end
+
 
   def profile_params
     params.require(:profile).permit(:first_name, :last_name, :contact_email, :job_title, :phone_number, :description, :user_id)

@@ -12,6 +12,9 @@ gem 'stripe'
 #use figaro for hiding secret keys
 gem 'figaro'
 
+#using paperclip for attaching user images
+gem 'paperclip'
+
 gem 'pry'
 # use postgresql as the database for production
 group :production do

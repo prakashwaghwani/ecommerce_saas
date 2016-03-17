@@ -15,7 +15,7 @@ gem 'figaro'
 #using paperclip for attaching user images
 gem 'paperclip', git: "git://github.com/thoughtbot/paperclip.git"
 
-gem 'aws-sdk', '< 2.0'
+gem 'aws-sdk'
 
 gem 'pry'
 # use postgresql as the database for production

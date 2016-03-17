@@ -22,8 +22,11 @@ group :production do
   gem 'rails_12factor'
 end
 
-gem 'bootstrap-sass'
 #add bootstrap
+gem 'bootstrap-sass'
+
+#prefixer css
+gem 'autoprefixer-rails'
 
 gem 'font-awesome-sass', '~> 4.5.0'
 #adding font

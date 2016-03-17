@@ -15,6 +15,8 @@ gem 'figaro'
 #using paperclip for attaching user images
 gem 'paperclip'
 
+gem 'aws-sdk'
+
 gem 'pry'
 # use postgresql as the database for production
 group :production do
